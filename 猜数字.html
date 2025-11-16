@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jyc猜数字</title>
+	<meta name="gkn :)">
+
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 50px; }
+        input { padding: 10px; font-size: 16px; }
+        button { padding: 10px 20px; font-size: 16px; background: #4CAF50; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <h1>这里是gkn给jyc做的猜数字游戏</h1>
+    <input type="number" id="guess" placeholder="输入1-100数字">
+    <button onclick="checkGuess()">猜！</button>
+    <p id="hint"></p>
+
+    <script>
+        const target = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        function checkGuess() {
+            const guess = parseInt(document.getElementById("guess").value);
+            attempts++;
+            const hint = document.getElementById("hint");
+
+            if (guess > target) {
+                hint.textContent = "太大了！";
+            } else if (guess < target) {
+                hint.textContent = "太小了！";
+            } else {
+                hint.textContent = `恭喜jyc！你猜对了，用了 ${attempts} 次哈哈😂`;
+                hint.style.color = "green";
+            }
+        }
+    </script>
+</body>
+</html>
