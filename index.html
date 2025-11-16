@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>jyc²ÂÊı×Ö</title>
+    <title>jycçŒœæ•°å­—</title>
 	<meta name="gkn :)">
 
     <style>
@@ -12,9 +12,9 @@
     </style>
 </head>
 <body>
-    <h1>ÕâÀïÊÇgkn¸øjyc×öµÄ²ÂÊı×ÖÓÎÏ·</h1>
-    <input type="number" id="guess" placeholder="ÊäÈë1-100Êı×Ö">
-    <button onclick="checkGuess()">²Â£¡</button>
+    <h1>è¿™é‡Œæ˜¯gknç»™jycåšçš„çŒœæ•°å­—æ¸¸æˆ</h1>
+    <input type="number" id="guess" placeholder="è¾“å…¥1-100æ•°å­—">
+    <button onclick="checkGuess()">çŒœï¼</button>
     <p id="hint"></p>
 
     <script>
@@ -27,11 +27,11 @@
             const hint = document.getElementById("hint");
 
             if (guess > target) {
-                hint.textContent = "Ì«´óÁË£¡";
+                hint.textContent = "å¤ªå¤§äº†ï¼";
             } else if (guess < target) {
-                hint.textContent = "Ì«Ğ¡ÁË£¡";
+                hint.textContent = "å¤ªå°äº†ï¼";
             } else {
-                hint.textContent = `¹§Ï²jyc£¡Äã²Â¶ÔÁË£¬ÓÃÁË ${attempts} ´Î¹ş¹ş”9ü8`;
+                hint.textContent = `æ­å–œjycï¼ä½ çŒœå¯¹äº†ï¼Œç”¨äº† ${attempts} æ¬¡å“ˆå“ˆğŸ˜‚`;
                 hint.style.color = "green";
             }
         }
